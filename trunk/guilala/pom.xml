@@ -7,8 +7,9 @@
   <packaging>pom</packaging>
   <distributionManagement>
     <site>
-      <id>website</id>
-      <url>scp://webhost.company.com/www/website</url>
+      <id>net.transformatorhuis.guilala</id>
+      <url>scp://cyberroadie@shell.berlios.de/home/groups/guilala/htdocs/</url>
+      <name>Guilala</name>
     </site>
   </distributionManagement>
 </project>
