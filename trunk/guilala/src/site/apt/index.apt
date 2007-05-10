@@ -1,0 +1,23 @@
+ -----
+ Guilala
+ -----
+ Transformer
+ -----
+ 10 May 2007
+ -----
+
+Guilala Project
+
+ GUILala is a client side graphical user interface applet. Graphics render purely on GPU in openGL 
+ to vastly outperform established technologies like Macromedia Flash and DHTML. The 2D-ish Guilala 
+ layers render in a 3D GPU environment. This enables things like smooth zoom and scrolling, lighting 
+ effects and displaying 3D objects.
+
+ Format: Vector based format of 2D graphical objects is SVG, 3D format is RIB, pixel based material in PNG. Objects, layers and user interaction are described in cascading XML files. The Java applet is cross platform, using libraries like JSR 231.
+
+
++-----+
+
+mvn site
+
++-----+
