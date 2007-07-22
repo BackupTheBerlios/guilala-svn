@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Polaroid</groupId>
+	<artifactId>Polaroid</artifactId>
+	<version>0.0.3</version>
+	<description></description>
+	<packaging>jar</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<configuration>
+				<descriptorRefs>
+					<descriptorRef>jar-with-dependencies</descriptorRef>
+				</descriptorRefs>
+			</configuration>
+			<executions>
+					<execution>
+							<id>make-assembly</id>
+							<phase>package</phase>
+							<goals>
+									<goal>attached</goal>
+							</goals>
+					</execution>
+			</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<property name="apache.path" value="/var/www/various/svg/java" />
+									<copy todir="${apache.path}" verbose="yes">
+										<fileset dir="${basedir}/target">
+											<include name="**/*jar-with-dependencies.jar"/>
+										</fileset>
+									</copy>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>batik</groupId>
+			<artifactId>batik-util</artifactId>
+			<version>1.6-1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>batik</groupId>
+			<artifactId>batik-swing</artifactId>
+			<version>1.6-1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>batik</groupId>
+			<artifactId>batik-svg-dom</artifactId>
+			<version>1.6-1</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+</project>
