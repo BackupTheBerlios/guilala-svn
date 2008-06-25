@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project name="polaroid" basedir="." default="">	
+	<target name="copy jrecheck applet to appletBuild">
+		
+		<copy todir="/media/user/Apache/www/appletBuild" overwrite="no" verbose="yes">
+			<fileset dir="./html">
+			</fileset>
+		</copy>
+		
+		<copy todir="/media/user/Apache/www/appletBuild" overwrite="no" verbose="yes">
+			<fileset dir="./bin//">
+				<exclude name="**/*.bak"/>
+			</fileset>
+		</copy>
+
+	</target>	
+</project>

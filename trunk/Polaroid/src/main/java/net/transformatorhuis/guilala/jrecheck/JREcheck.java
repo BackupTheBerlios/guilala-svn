@@ -1,4 +1,4 @@
-package net.transformatorhuis.guilala.jrecheck;
+package Polaroid.src.main.java.net.transformatorhuis.guilala.jrecheck;
 
 import netscape.javascript.*;
 import java.applet.*;
