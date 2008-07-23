@@ -1,0 +1,18 @@
+html{
+	overflow:hidden;
+}
+
+body{
+	background-color:#fff;
+	background-repeat:repeat-x;
+	padding:0px;
+	margin:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	overflow:hidden;
+	cursor:default;
+	white-space:normal;
+}
+
+flex{
+	display:none;
+}

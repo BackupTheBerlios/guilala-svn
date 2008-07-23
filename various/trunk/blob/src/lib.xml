@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lib>
+	<flex>
+		<div style="position:absolute;	border-style:solid; border-width:1px; border-color:#ccc;">
+				<div style="position:relative; width:0px; height:10%px; font-size:0px; float:left;">
+					<div style="position:relative; width:13px; left:-29px; top:-4px; font-size:11px; visibility:hidden;">
+						<div title="Edit object options" style="font-size:0px; width:12px; height:12px; margin-bottom:4px;" bg="./img/edit"> </div>
+						<div title="Save object changes" style="font-size:0px; width:12px; height:12px; margin-bottom:4px;" bg="./img/save"> </div>
+						<div title="Delete this object" style="font-size:0px; width:12px; height:12px;" bg="./img/delete"> </div>
+					</div>
+					<flex>
+						<rct stroke="7,7,7,7" type="./img/rct/toolbox"> </rct>
+						<mouseover><![CDATA[
+						
+						]]></mouseover>
+						<mouseout><![CDATA[
+						
+						]]></mouseout>
+					</flex>
+				</div>
+				<flex>
+					<rct stroke="11,11,11,11" type="./img/rct/whity"> </rct>
+					<position>
+						<vertical>middle</vertical>
+						<horizontal>middel</horizontal>
+					</position>
+					<over><![CDATA[
+pe(this, 'over');
+						]]></over>
+					<out><![CDATA[
+pe(this, 'out');
+					]]></out>
+				</flex>
+		</div>
+	</flex>
+</lib>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<project name="guilala Various" basedir=".">
+	<target name="canvasConnectors - copy to local Apache">
+		<copy todir="/media/user/Apache/www/various/Gui/canvasConnectors" overwrite="no" verbose="yes">
+			<fileset dir="./canvasConnector/src">
+				<exclude name="**/.*.*"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

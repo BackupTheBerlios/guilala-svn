@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project name="phPath" basedir="." default="copy phPath to local Apache">
+	<property name="ftp.user" value="transformatorhuis" />
+	<property name="ftp.password" value="fokker70" />
+	<property name="ftp.server" value="transformatorhuis.110mb.com" />
+	<property name="local.fanieken" value="./src" />
+	<property name="remote.fanieken" value="/" />
+	
+	<target name="copy phPath to 110mb.com">
+		<ftp
+			server="${ftp.server}"
+			userid="${ftp.user}"
+			password="${ftp.password}"
+			action="put"
+			remotedir="${remote.fanieken}"
+			binary="yes"
+			depends="yes"
+			verbose="yes"
+		>
+			<fileset dir="${local.fanieken}" />
+		</ftp>
+	</target>
+	
+	<target name="copy phPath to 110mb.com overwrite">
+		<ftp
+			server="${ftp.server}"
+			userid="${ftp.user}"
+			password="${ftp.password}"
+			action="put"
+			remotedir="${remote.fanieken}"
+			binary="yes"
+			depends="no"
+			verbose="yes"
+		>
+			<fileset dir="${local.fanieken}" />
+		</ftp>
+	</target>
+	
+	<target name="copy phPath to local Apache">
+		<copy todir="/var/www/phPath" overwrite="no" verbose="yes">
+			<fileset dir="${local.fanieken}">
+				<exclude name="**/*.xsd"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

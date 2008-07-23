@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webapp>
+	<objects>
+		<pix>
+			<target>pixDiv</target>
+			<position>100,100</position>
+			<size>300,200</size>
+			<name>pix 1</name>
+		</pix>
+		<pix>
+			<target>pixDiv</target>
+			<position>455,100</position>
+			<size>200,100</size>
+			<name>pix 2</name>
+		</pix>
+	</objects>
+</webapp>
